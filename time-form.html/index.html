@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <div class="logo"><img class="logo1" src="images/logo.png" alt="LOGO"></div>
+        </a>
+        <div class="text">Talk to a Consolidation Specialist 📞 (888) 888-8888</div>
+    </header>
+
+    <div id="titleSelect" class="primtext">
+        <h1>What Is The Best Time To Reach You?</h1>
+    </div>
+
+    <div id="timeSection">
+        <div class="timetext">
+            <label for="time" class="timetext1">Choose Your Time</label>
+            <input type="time" id="timeInput">
+        </div>
+
+        <div class="button">
+            <button class="button1" id="continueBtn" type="button">Continue > </button>
+        </div>
+    </div>
+
+    <div class="terms" id="termsForm">
+        <a href="#" class="conditions">Terms and Conditions</a>
+        <a href="#" class="privacy">Privacy Policy</a>
+        <a href="#" class="california">California Privacy</a>
+    </div>
+
+    <div id="timeForm" class="hidden">
+        <h1 class="primtext">Add Your Personal Details</h1>
+        <form id="userForm">
+            <input type="text" id="timeInput" placeholder="First Name" required><br>
+            <input type="text" id="timeInput" placeholder="Last Name" required><br>
+            <input type="email" id="timeInput" placeholder="Email" required><br>
+            <input type="tel" id="timeInput" placeholder="Phone Number" required><br>
+            <button type="submit" class="button2">Submit Your Details</button>
+        </form>
+        <div class="terms">
+            <a href="#" class="conditions">Terms and Conditions</a>
+            <a href="#" class="privacy">Privacy Policy</a>
+            <a href="#" class="california">California Privacy</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let continueBtn = document.getElementById("continueBtn");
+            let timeSection = document.getElementById("timeSection");
+            let titleSelect = document.getElementById("titleSelect");
+            let timeInput = document.getElementById("timeInput");
+            let timeForm = document.getElementById("timeForm");
+            let userForm = document.getElementById("userForm");
+
+            continueBtn.addEventListener("click", function () {
+                let timeValue = timeInput.value;
+                if (timeValue) {
+                    timeForm.classList.remove("hidden");
+                    timeSection.style.display = "none";
+                    titleSelect.style.display = "none";
+                    termsForm.style.display = "none";
+                } else {
+                    alert("Please select a time first.");
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+<footer>
+    <div class="footertext">
+        <p class="footertext1"> It is important to clarify that this site is not affiliated with Facebook or Facebook
+            Inc. in any way. While
+            Facebook is a widely used platform, this website operates independently and is not endorsed by Facebook. The
+            same applies to YouTube and Google, as the website is not a part of or endorsed by either company. This
+            distinction ensures transparency and prevents any confusion regarding the website's association with major
+            social media platforms and services.</p>
+        <p class="footertext2">This website contains paid attorney or advocate advertisements. These advertisements are
+            legally required to
+            be disclosed to users to ensure transparency in the promotion of legal services or advice. It is essential
+            for visitors to recognize that the content and services promoted here are part of a paid advertisement
+            campaign, which is separate from any organic content or endorsements provided by other entities such as
+            social media platforms or search engines.</p>
+        <p class="footertext2"> This website uses tools like Google Analytics and Google Ads to monitor user behavior
+            and enhance marketing
+            strategies. Tracking allows the website to better understand user preferences and optimize content for a
+            more tailored experience. If users prefer not to be tracked, they have the option to opt-out of user
+            tracking by clicking on the provided link. This ensures that users have control over their data and can make
+            informed choices about their online experience.
+        </p>
+    </div>
+</footer>
